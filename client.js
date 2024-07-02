@@ -16,23 +16,23 @@ async function sendMsgPackData() {
   console.log('Sending packed data:', packD);
 
 
-//   try {
-//     const response = await axios.post('http://localhost:3000/api/messagepacks', packedData, {
-//       headers: { 'Content-Type': 'application/msgpack' },
-//       responseType: 'arraybuffer'
-//     });
+  try {
+    const response = await axios.post('http://localhost:3000/api/messagepacks', packedData, {
+      headers: { 'Content-Type': 'application/msgpack' },
+      responseType: 'arraybuffer'
+    });
 
-//     console.log('Raw response data:', response.data);
+    console.log('Raw response data:', response.data);
 
-//     if (response.data) {
-//       const responseData = decode(Buffer.from(response.data));
-//       console.log('Decoded response data:', responseData);
-//     } else {
-//       console.error('Response data is undefined or null');
-//     }
+    if (response.data) {
+      const responseData = decode(Buffer.from(response.data));
+      console.log('Decoded response data:', responseData);
+    } else {
+      console.error('Response data is undefined or null');
+    }
 
-//   } catch (error) {
-//     console.error('Error:', error);
+  } catch (error) {
+    console.error('Error:', error);
 //   }
 }
 
