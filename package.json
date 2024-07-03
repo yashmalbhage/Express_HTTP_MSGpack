@@ -12,6 +12,7 @@
   "dependencies": {
     "@msgpack/msgpack": "^3.0.0-beta2",
     "axios": "^1.7.2",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "object-sizeof": "^2.6.4"
   }
 }
